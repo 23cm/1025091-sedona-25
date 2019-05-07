@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Max Almaty](https://up.htmlacademy.ru/htmlcss/25/user/1025091).
-* Наставник: `Неизвестно`.
+* Наставник: [Иван Кузьмичёв](https://htmlacademy.ru/profile/id342395).
 
 ---
 
