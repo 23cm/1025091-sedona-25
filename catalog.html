@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
   </head>
   <body>
-    <!-- include ../modules/header-->
     <header class="main-header">
       <nav class="main-navigation">
         <div class="main-header-logo"><a href="index.html"><img src="img/main-logo-sedona.svg" width="138" height="70" alt="City of Sedona Logo"></a></div>
@@ -21,6 +20,52 @@
     </header>
     <main class="container">
       <h1 class="visually-hidden">Поиск Гостиниц в Sedona</h1>
+      <section class="filter">
+        <h2 class="visually-hidden">Выбор параметров поиска</h2>
+        <form action="https://echo.htmlacademy.ru" method="get"> 
+          <fieldset class="filter-items">
+            <legend class="filter-items-header">Инфраструктура:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="swimming-pool" id="pool" checked>
+                <label for="pool">Бассейн</label>
+              </li>
+              <li>
+                <input type="checkbox" name="guest-parking" id="parking">
+                <label for="parking">Парковка</label>
+              </li>
+              <li>
+                <input type="checkbox" name="wi-fi" id="wifi">
+                <label for="wifi">Wi-Fi   </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter-items">
+            <legend class="filter-items-header">Тип жилья:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="hotel" id="hotel" checked>
+                <label for="hotel">Гостиница</label>
+              </li>
+              <li>
+                <input type="checkbox" name="motel" id="motel" checked>
+                <label for="motel">Мотель</label>
+              </li>
+              <li>
+                <input type="checkbox" name="appartments" id="appartments" checked>
+                <label for="appartments">Аппартаменты   </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter-items">
+            <legend class="filter-items-header">Стоимость в сутки (Р):</legend>
+            <input type="text" value="0" name="min-value">
+            <input type="text" value="3000" name="max-value">
+          </fieldset>
+          <!-- пока убрал как бесполезную информацию input(type='range', min='0', max='3888', value='3000', name='price-range')-->
+          <button type="submit">Показать</button>
+        </form>
+      </section>
       <section class="catalog">
         <div class="search-result">
           <p class="header">Найдено: 3</p>
