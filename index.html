@@ -29,7 +29,7 @@
           <p>№1</p>
           <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
         </div>
-        <div class="img-card-wide"><img src="img/800x256-town-sedona-01.jpg" width="800" height="256" alt="Sedona Town street view">
+        <div class="img-card-wide"><img src="img/800x256-town-sedona-01.jpg" width="800" height="256" alt="Городской пейзаж, одна из уютных улочек Седоны">
           <!-- Карточки на белом-->
         </div>
         <div class="card white-card">
@@ -47,7 +47,7 @@
           <h2 class="header">Сувениры</h2>
           <p>Не только китайского, но и местного производства!</p>
         </div>
-        <div class="img-card-wide"><img src="img/800x256-canion-sedona-01.jpg" width="800" height="256" alt="Sedona вид на мост дьявола"></div>
+        <div class="img-card-wide"><img src="img/800x256-canion-sedona-01.jpg" width="800" height="256" alt="Каньён в Седоне – вид на мост дьявола"></div>
         <div class="card blue-card">
           <h2 class="header">Там есть Мост дьявола</h2>
           <p>№2</p>
@@ -73,17 +73,43 @@
         <h2 class="booking-header">Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Cедоне</p>
         <button class="btn-booking-form">Поиск гостиницы в Седоне</button>
+        <div class="form-booking">
+          <form method="post" action="https://echo.htmlacademy.ru">
+            <fieldset>
+              <legend>
+                <h2 class="visually-hidden">Поиск гостиницы в Cедоне</h2>
+              </legend>
+              <p class="form-item">
+                <label for="checkInDate">Дата заезда:</label>
+                <input type="date" name="checkin-date" id="checkInDate" value="2017-04-24">
+              </p>
+              <p class="form-item">
+                <label for="checkOutDate">Дата выезда:</label>
+                <input type="date" name="check-out-date" id="checkOutDate" value="2017-07-04">
+              </p>
+              <p class="form-item">
+                <label for="adultsQty">Взрослые:</label>
+                <input type="number" name="adults-qty" id="adultsQty" value="2">
+              </p>
+              <p class="form-item">
+                <label for="childsQty">Дети:</label>
+                <input type="number" name="childs-qty" id="childsQty" value="0">
+              </p>
+              <button class="button" type="submit">Найти</button>
+            </fieldset>
+          </form>
+        </div>
       </section>
-      <section class="booking-map"><img src="img/map.webp" width="1200" height="593" alt="Карта с отелями в Sedona"></section>
+      <section class="booking-map"><img src="img/map-of-sedona.jpg" width="1200" height="593" alt="Карта с отелями в Sedona"></section>
     </main>
     <footer class="main-footer">
-      <p class="header">#VisitSedona</p>
+      <p class="header" title="Хэштег VisitSedona">#VisitSedona</p>
       <ul class="footer-socials">
         <li><a class="social-button" href="#">Twitter</a></li>
         <li><a class="social-button" href="#">Facebook</a></li>
         <li><a class="social-button" href="#">Youtube</a></li>
       </ul>
-      <p class="footer-copyright">Website by <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo_name-academy.svg" width="115" height="42" alt="HTML Academy Logo"></a></p>
+      <p class="footer-copyright">Website by <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo_name-academy.svg" width="115" height="42" alt="Логотип HTML Academy"></a></p>
     </footer>
   </body>
 </html>
