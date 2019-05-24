@@ -5,7 +5,9 @@
 #Типографика и общие стили
 #Главное меню, основная навигация
 #Header Главный банер на главной странице
+#Карточки преимуществ на главной
 #Заинтересовались + Кнопка Поиск Гостиницы в Седоне
+#Фильтр - Поиск на страцице Гостиницы - Фильтр
 #Каталог на странице Гостиницы
 #Футер
 
@@ -98,8 +100,6 @@ img {
   margin: 0;
   padding: 0;
 
-  text-align: center;
-
   background-color: rgb(83, 78, 78);
   background-image: url("../img/background-crop.jpg");
   background-repeat: no-repeat;
@@ -119,6 +119,8 @@ img {
 }
 
 .main-page-banner img {
+  display: block;
+  margin: 0 auto;
   padding-top: 76px;
 }
 
@@ -156,6 +158,33 @@ img {
   background-color: #503e33;
 }
 
+/* #Карточки преимуществ на главной
+================================================== */
+.card {
+  text-align: center;
+
+  background-color: #ffffff;
+}
+.card:nth-child(n+8) {
+  background-color: #eeeeee;
+}
+
+.blue-card {
+  color: #ffffff;
+
+  background-color: #81b3d2;
+}
+
+.blue-card .title {
+  color: #ffffff;
+}
+.card-number:before {
+  content: "– ";
+}
+.card-number:after {
+  content: " –";
+}
+
 /* #Форма бронирования
 ================================================== */
 
@@ -171,7 +200,18 @@ img {
 
   background-color: #f2f2f2;
   border: 0;
+  border: 1px solid #ffffff;
 }
+.form-booking input:hover {
+  background-color: #ebebeb;
+}
+
+.form-booking input:active,
+.form-booking input:focus {
+  background-color: #ffffff;
+  border: 1px solid #333333;
+}
+
 .form-booking-btn {
   width: 458px;
   height: 58px;
@@ -195,6 +235,119 @@ img {
 
   background-color: #5496bd;
 }
+
+/* Фильтр - Поиск на страцице Гостиницы - Фильтр
+==================================================  */
+
+.search-result {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.filter form {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  min-height: 217px;
+  margin: 0 auto;
+
+  color: #ffffff;
+
+  background-color: rgb(54, 116, 214);
+  background-image: url(../img/catalog-bg-blur.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.filter-items ul {
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+
+  list-style: none;
+  font-size: 16px;
+  line-height: 1.313;
+}
+
+fieldset.filter-items {
+  margin: 0;
+  padding: 0;
+
+  border-width: 0;
+  border-image: none;
+}
+
+.filter-items legend {
+  margin-bottom: 15px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.313;
+}
+
+.filter button {
+  display: block;
+  width: 141px;
+  height: 40px;
+  margin: 10px;
+
+  font: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  border-radius: 2px;
+}
+
+.filter button:hover,
+.filter button:active,
+.filter button:focus {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.search-types {
+  display: flex;
+  margin-right: 10px;
+
+  font-size: 12px;
+}
+
+/* подчеркивание сделал через border из-за ie11 */
+.sorting-type {
+  margin-right: 10px;
+
+  color: rgba(0, 0, 0, 0.302);
+  text-decoration: none;
+
+  border-bottom: 1px dotted #81b3d2;
+}
+
+.sorting-type:hover {
+  color: #81b3d2;
+}
+
+.sorting-type:active,
+.sorting-type:focus {
+  color: #000000;
+
+  border-bottom: transparent;
+}
+
+.sorting-type-current {
+  margin-right: 10px;
+
+  color: rgb(129, 179, 210);
+  text-decoration: none;
+
+  border-bottom: transparent;
+}
+
 
 /* #Каталог на странице Гостиницы
 ================================================== */

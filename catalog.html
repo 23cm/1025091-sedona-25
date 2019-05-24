@@ -62,15 +62,18 @@
             <legend class="filter-items-header">Стоимость в сутки (Р):</legend>
             <input type="text" value="0" name="min-value">
             <input type="text" value="3000" name="max-value">
+            <!-- пока убрал как бесполезную информацию input(type='range', min='0', max='3888', value='3000', name='price-range')-->
+            <button type="submit">Показать</button>
           </fieldset>
-          <!-- пока убрал как бесполезную информацию input(type='range', min='0', max='3888', value='3000', name='price-range')-->
-          <button type="submit">Показать</button>
         </form>
       </section>
       <section class="catalog">
         <div class="search-result">
-          <p class="header">Найдено: 3</p>
-          <div class="serach-sorting-types"><span class="sorting-type-text">Сортировка: </span><a class="sorting-type sorting-type-current" href="#">По цене</a><a class="sorting-type" href="#">По типу</a><a class="sorting-type" href="#">По рейтингу</a></div>
+          <div class="title">Найдено: 3</div>
+          <div class="search-types">
+            <div class="sorting-type-text">Сортировка: </div>
+            <div class="sorting-type-current">По цене</div><a class="sorting-type" href="#">По типу</a><a class="sorting-type" href="#">По рейтингу</a>
+          </div>
           <div class="sorting-arrows"><a class="sorting-arrow arrow-up" href="#">Up</a><a class="sorting-arrow arrow-down" href="#">Down</a></div>
         </div>
         <ul class="catalog-list">
