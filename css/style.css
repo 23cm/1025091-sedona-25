@@ -34,18 +34,50 @@ img {
 }
 
 
+/* Сетка */
+.page-header {
+  margin: 0;
+  padding: 0;
+
+  background-color: #ffffff;
+}
+
+.page-navigation {
+  position: relative;
+
+  height: 56px;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.page-header-logo {
+  position: absolute;
+  left: 531px;
+
+  width: 138px;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
 /* #Главное меню, основная навигация
 ================================================== */
 
-.page-header {
-  background-color: #ffffff;
-}
 .nav-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
-  font-weight: 700;
 }
 
 .nav-link {
+  font-weight: 700;
   font-family: "PT Sans", "Arial", sans-serif;
   color: #000000;
 }
@@ -60,6 +92,7 @@ img {
 }
 
 .nav-link-current {
+  font-weight: 700;
   color: #766357;
 }
 
