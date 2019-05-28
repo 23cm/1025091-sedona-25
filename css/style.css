@@ -1,16 +1,3 @@
-/* Table of Contents
-==================================================
-#normalize.css подключил файлом
-#Глобальные стили
-#Типографика и общие стили
-#Главное меню, основная навигация
-#Header Главный банер на главной странице
-#Карточки преимуществ на главной
-#Заинтересовались + Кнопка Поиск Гостиницы в Седоне
-#Фильтр - Поиск на страцице Гостиницы - Фильтр
-#Каталог на странице Гостиницы
-#Футер
-
 
 /* #Глобальные стили
 ================================================== */
@@ -31,68 +18,55 @@ body {
 
   background-color: #f2f2f2;
 }
-
+a {
+  text-decoration: none;
+}
 img {
   max-width: 100%;
 }
 /* Сброс для a - не делал. Возможно позже */
 
-/* Типографика и общие стили
+/* Обертки для выравнивания
 ================================================== */
-
-.title {
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 1.238;
-  color: #000000;
+.container {
+  width: 1200px;
+  margin: 0 auto;
 }
 
-.text-frame {
-  margin: 0;
-
-  text-align: center;
-
-  background-color: #ffffff;
-}
-
-.text-frame-text {
-  margin: 0;
-}
 
 /* #Главное меню, основная навигация
 ================================================== */
 
-.main-header {
+.page-header {
   background-color: #ffffff;
 }
-.main-navigation .nav-list {
+.nav-list {
   list-style: none;
   font-weight: 700;
 }
 
-.main-navigation .nav-link {
+.nav-link {
   font-family: "PT Sans", "Arial", sans-serif;
   color: #000000;
-  text-decoration: none;
 }
 
-.main-navigation .nav-link:hover,
-.main-navigation .nav-link:focus {
+.nav-link:hover,
+.nav-link:focus {
   color: #81b3d2;
 }
 
-.main-navigation .nav-link:active {
+.nav-link:active {
   color: rgba(0, 0, 0, 0.302);
 }
 
-.main-navigation .nav-link-current {
+.nav-link-current {
   color: #766357;
 }
 
-/* #Header Главный банер на главной странице
+/* # Главный банер на главной странице
 ================================================== */
 
-.main-page-banner {
+.banner {
   position: relative;
 
   width: 1200px;
@@ -106,7 +80,7 @@ img {
   background-position: top center;
   border: 0;
 }
-.main-page-banner::after {
+.banner::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -118,24 +92,91 @@ img {
   background-image: url(../img/polygon_bottom.svg);
 }
 
-.main-page-banner img {
+.banner-img {
   display: block;
   margin: 0 auto;
   padding-top: 76px;
 }
 
+
+/* Обертка для текстовых промо
+================================================== */
+
+.text-frame {
+  margin: 0;
+  padding: 0;
+
+  background-color: #ffffff;
+}
+
+.text-frame-title {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1.238;
+  text-align: center;
+  color: #000000;
+}
+
+.text-frame-text {
+  margin: 0;
+
+  text-align: center;
+}
+
+/* #Карточки преимуществ на главной
+================================================== */
+
+.card {
+  text-align: center;
+
+  background-color: #ffffff;
+}
+
+.card-gray {
+  background-color: #eeeeee;
+}
+
+.card-blue {
+  color: #ffffff;
+
+  background-color: #81b3d2;
+}
+.card-title {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1.238;
+  color: #000000;
+}
+
+.card-blue .card-title {
+  color: #ffffff;
+}
+
+.card-number:before {
+  content: "– ";
+}
+
+.card-number:after {
+  content: " –";
+}
+
 /* #Заинтересовались + Кнопка Поиск Гостиницы в Седоне
 ================================================== */
 
-.booking .title {
+
+.text-frame-title-bigger {
+  font-weight: 700;
   font-size: 30px;
   line-height: 1.2;
+  text-align: center;
+  color: #000000;
 }
 
-.btn-booking-form {
+.text-frame-button-booking {
+  display: block;
   width: 568px;
   height: 86px;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 
   font-weight: 700;
@@ -147,72 +188,49 @@ img {
   border: 0;
 }
 
-.btn-booking-form:hover {
+.text-frame-button-booking:hover {
   background-color: #604e43;
 }
 
-.btn-booking-form:active,
-.btn-booking-form:focus {
+.text-frame-button-booking:active,
+.text-frame-button-booking:focus {
   color: rgba(255, 255, 255, 0.302);
 
   background-color: #503e33;
 }
 
-/* #Карточки преимуществ на главной
-================================================== */
-.card {
-  text-align: center;
 
-  background-color: #ffffff;
-}
-.card:nth-child(n+8) {
-  background-color: #eeeeee;
-}
 
-.blue-card {
-  color: #ffffff;
 
-  background-color: #81b3d2;
-}
-
-.blue-card .title {
-  color: #ffffff;
-}
-.card-number:before {
-  content: "– ";
-}
-.card-number:after {
-  content: " –";
-}
 
 /* #Форма бронирования
 ================================================== */
 
-.form-booking {
+.booking-form {
   font-weight: 700;
   line-height: 1.2;
   color: #000000;
 
   background-color: #ffffff;
 }
-.form-booking input {
+.booking-form-input {
   font: inherit;
 
   background-color: #f2f2f2;
   border: 0;
   border: 1px solid #ffffff;
 }
-.form-booking input:hover {
+.booking-form-input:hover {
   background-color: #ebebeb;
 }
 
-.form-booking input:active,
-.form-booking input:focus {
+.booking-form-input:active,
+.booking-form-input:focus {
   background-color: #ffffff;
   border: 1px solid #333333;
 }
 
-.form-booking-btn {
+.booking-form-btn {
   width: 458px;
   height: 58px;
 
@@ -225,12 +243,12 @@ img {
   border: 0;
 }
 
-.form-booking-btn:hover {
+.booking-form-btn:hover {
   background-color: #669ec0;
 }
 
-.form-booking-btn:active,
-.form-booking-btn:focus {
+.booking-form-btn:active,
+.booking-form-btn:focus {
   color: rgba(255, 255, 255, 0.302);
 
   background-color: #5496bd;
@@ -245,14 +263,19 @@ img {
   margin: 0 auto;
 }
 
-.filter form {
+.search-result-title {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1.238;
+  color: #000000;
+}
+
+.filter {
   display: flex;
   justify-content: space-between;
   width: 1200px;
   min-height: 217px;
   margin: 0 auto;
-
-  color: #ffffff;
 
   background-color: rgb(54, 116, 214);
   background-image: url(../img/catalog-bg-blur.jpg);
@@ -260,17 +283,29 @@ img {
   background-position: top;
 }
 
-.filter-items ul {
+.filter-list {
   margin: 0;
-  margin-bottom: 15px;
   padding: 0;
 
   list-style: none;
-  font-size: 16px;
-  line-height: 1.313;
 }
 
-fieldset.filter-items {
+.filter-list-item {
+  font-size: 16px;
+  line-height: 1.313;
+  color: #ffffff;
+}
+
+.filter-title {
+  margin-bottom: 15px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.313;
+  color: #ffffff;
+}
+
+.filter-wrap {
   margin: 0;
   padding: 0;
 
@@ -278,15 +313,7 @@ fieldset.filter-items {
   border-image: none;
 }
 
-.filter-items legend {
-  margin-bottom: 15px;
-
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.313;
-}
-
-.filter button {
+.filter-button {
   display: block;
   width: 141px;
   height: 40px;
@@ -303,9 +330,9 @@ fieldset.filter-items {
   border-radius: 2px;
 }
 
-.filter button:hover,
-.filter button:active,
-.filter button:focus {
+.filter-button:hover,
+.filter-button:active,
+.filter-button:focus {
   color: #000000;
 
   background-color: #ffffff;
@@ -320,10 +347,11 @@ fieldset.filter-items {
 
 /* подчеркивание сделал через border из-за ie11 */
 .sorting-type {
+  height: 17px;
   margin-right: 10px;
+  padding: 0;
 
   color: rgba(0, 0, 0, 0.302);
-  text-decoration: none;
 
   border-bottom: 1px dotted #81b3d2;
 }
@@ -343,7 +371,6 @@ fieldset.filter-items {
   margin-right: 10px;
 
   color: rgb(129, 179, 210);
-  text-decoration: none;
 
   border-bottom: transparent;
 }
@@ -360,30 +387,24 @@ fieldset.filter-items {
   list-style: none;
 }
 
-.catalog-item-header {
+.hotel-title {
   font-weight: 700;
   font-size: 21px;
   line-height: 1.238;
   color: #000000;
-  text-decoration: none;
 }
 
-.catalog-item-header h2 {
-  margin: 0;
 
-  font: inherit;
-}
-
-.catalog-item-header:hover {
+.hotel-title:hover {
   color: #81b3d2;
 }
 
-.catalog-item-header:active,
-.catalog-item-header:focus {
+.hotel-title:active,
+.hotel-title:focus {
   color: rgba(0, 0, 0, 0.302);
 }
 
-.btn-book-now {
+.hotel-button-book {
   padding: 0;
 
   font-size: 14px;
@@ -394,38 +415,37 @@ fieldset.filter-items {
   border: 0;
 }
 
-.btn-book-now:hover {
+.hotel-button-book:hover {
   background-color: #604e43;
 }
 
-.btn-book-now:active,
-.btn-book-now:focus {
+.hotel-button-book:active,
+.hotel-button-book:focus {
   color: rgba(255, 255, 255, 0.302);
 
   background-color: #503e33;
 }
 
-.item-btn {
+.hotel-button-more {
   color: #ffffff;
   text-transform: uppercase;
-  text-decoration: none;
 
   background-color: #81b3d2;
   border: 0;
 }
 
-.item-btn:hover {
+.hotel-button-more:hover {
   background-color: #669ec0;
 }
 
-.item-btn:active,
-.item-btn:focus {
+.hotel-button-more:active,
+.hotel-button-more:focus {
   color: rgba(255, 255, 255, 0.302);
 
   background-color: #5496bd;
 }
 
-.item-rating-text {
+.hotel-rating-text {
   width: 111px;
 
   text-align: center;
@@ -436,7 +456,7 @@ fieldset.filter-items {
 
 /* Блок со свездами не делал. Вроде как на этом уровне его не задавали. Поэтому сделанно в виде наброска */
 
-.item-rating-stars {
+.hotel-rating-stars {
   height: 18px;
 
   text-align: center;
@@ -459,7 +479,7 @@ fieldset.filter-items {
 /* #Футер
 ==================================================  */
 
-.main-footer {
+.page-footer {
   background-color: rgba(255, 255, 255, 0.902);
 }
 .footer-copyright {
@@ -472,7 +492,6 @@ fieldset.filter-items {
 
 .footer-socials a {
   color: #000000;
-  text-decoration: none;
 }
 
 .social-button {
