@@ -34,7 +34,7 @@ img {
 }
 
 
-/* Сетка */
+/* Сетка header */
 .page-header {
   margin: 0;
   padding: 0;
@@ -45,8 +45,8 @@ img {
 .page-navigation {
   position: relative;
 
-  height: 56px;
   width: 1200px;
+  height: 56px;
   margin: 0 auto;
   padding: 0;
 }
@@ -54,12 +54,113 @@ img {
 .page-header-logo {
   position: absolute;
   left: 531px;
+  z-index: 1;
 
   width: 138px;
   margin: 0;
   padding: 0;
-  z-index: 1;
 }
+
+/* Временно пока не встрою карту нормально */
+.booking-map img {
+  display: block;
+}
+/* #Футер
+==================================================  */
+
+.page-footer {
+  margin: 0;
+  padding: 0;
+}
+
+.page-footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  height: 120px;
+  margin: 0 auto;
+
+  background-color: rgba(255, 255, 255, 0.902);
+}
+
+.page-footer-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.page-footer-middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-footer-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hashtag-title {
+  margin: 0;
+
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1.238;
+  color: #000000;
+}
+
+.socials-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+}
+
+.copyright-text {
+  margin: 0;
+  margin-right: 8px;
+  padding: 0;
+
+  color: #000000;
+}
+
+.copywrite-img {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.social-button {
+  color: #000000;
+
+  background-color: #81b3d2;
+}
+
+.social-button:hover {
+  background-color: #669ec0;
+}
+
+.social-button:active,
+.social-button:focus {
+  background-color: #5496bd;
+}
+
 
 /* #Главное меню, основная навигация
 ================================================== */
@@ -143,6 +244,8 @@ img {
 }
 
 .text-frame-title {
+  margin: 0;
+
   font-weight: 700;
   font-size: 21px;
   line-height: 1.238;
@@ -175,6 +278,8 @@ img {
   background-color: #81b3d2;
 }
 .card-title {
+  margin: 0;
+
   font-weight: 700;
   font-size: 21px;
   line-height: 1.238;
@@ -286,6 +391,8 @@ img {
 
   background-color: #5496bd;
 }
+
+
 
 /* Фильтр - Поиск на страцице Гостиницы - Фильтр
 ==================================================  */
@@ -417,6 +524,9 @@ img {
 }
 
 .catalog-list {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -507,35 +617,4 @@ img {
 
 .stars-two {
   width: 35px;
-}
-
-/* #Футер
-==================================================  */
-
-.page-footer {
-  background-color: rgba(255, 255, 255, 0.902);
-}
-.footer-copyright {
-  color: #000000;
-}
-
-.footer-socials {
-  list-style: none;
-}
-
-.footer-socials a {
-  color: #000000;
-}
-
-.social-button {
-  background-color: #81b3d2;
-}
-
-.social-button:hover {
-  background-color: #669ec0;
-}
-
-.social-button:active,
-.social-button:focus {
-  background-color: #5496bd;
 }
