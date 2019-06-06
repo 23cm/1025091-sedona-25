@@ -420,10 +420,14 @@ input[type="radio"].visually-hidden {
 }
 
 .booking-form {
+  position: absolute;
+  left: 50%;
+  margin-left: -284px;
   font-weight: 700;
   line-height: 1.2;
   color: #000000;
   background-color: #ffffff;
+  z-index: 3;
 }
 
 .booking-form-input {
