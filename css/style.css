@@ -343,6 +343,16 @@ input[type="radio"].visually-hidden {
   margin-bottom: 20px;
 }
 
+.card-with-img {
+  width: 1200px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.img-card-wide {
+  height: 256px;
+}
+
 .card-blue .card-title {
   color: #ffffff;
 }
@@ -353,12 +363,6 @@ input[type="radio"].visually-hidden {
 
 .card-number:after {
   content: " –";
-}
-
-.img-card-wide {
-  height: 256px;
-  margin: 0;
-  padding: 0;
 }
 
 .icon {
@@ -867,7 +871,7 @@ input[type="radio"].visually-hidden {
 
 .filter-list-item-checkbox {
   position: absolute;
-  width: 23px;
+  width: 27px;
   height: 23px;
   margin-top: 0;
   margin-left: -40px;
