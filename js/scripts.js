@@ -5,7 +5,6 @@ var form = searchPopup.querySelector("form");
 hotelSearchButton.addEventListener("click",
 function (evt) {
   evt.preventDefault();
-  console.log("hello world");
   searchPopup.classList.toggle("modal-hide");
 });
 
