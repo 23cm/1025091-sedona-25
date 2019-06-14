@@ -443,16 +443,19 @@ input[type="radio"].visually-hidden {
   margin: 0 auto;
 }
 
-.booking-map {
-  height: 593px;
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
 #map {
   z-index: 0;
   height: 100%;
+}
+
+.booking-map {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-image: url("img/map-of-sedona.jpg");
+  background-repeat: no-repeat;
+  width: 1200px;
+  height: 593px;
 }
 
 .booking-form {
