@@ -415,8 +415,8 @@ input[type="radio"].visually-hidden {
   padding: 24px 0;
   font-weight: 700;
   font-size: 21px;
-  color: #ffffff;
   text-align: center;
+  color: #ffffff;
   text-transform: uppercase;
   background-color: #766357;
   border: 0;
@@ -437,8 +437,8 @@ input[type="radio"].visually-hidden {
 }
 
 .booking {
-  box-sizing: border-box;
   position: relative;
+  box-sizing: border-box;
   width: 1200px;
   margin: 0 auto;
 }
@@ -449,13 +449,13 @@ input[type="radio"].visually-hidden {
 }
 
 .booking-map {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background-image: url("img/map-of-sedona.jpg");
-  background-repeat: no-repeat;
   width: 1200px;
   height: 593px;
+  margin: 0;
+  padding: 0;
+  background-image: url("../img/map-of-sedona.jpg");
+  background-repeat: no-repeat;
+  border: 0;
 }
 
 .booking-form {
