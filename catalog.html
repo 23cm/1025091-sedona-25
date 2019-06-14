@@ -21,49 +21,69 @@
         </nav>
       </header>
       <main>
-        <h1 class="visually-hidden">Поиск Гостиниц в Sedona</h1>
         <section class="hotel-search">
+          <h1 class="visually-hidden">Поиск Гостиниц в Sedona</h1>
           <h2 class="visually-hidden">Выбор параметров поиска</h2>
           <form class="filter" action="https://echo.htmlacademy.ru" method="get"> 
             <fieldset class="filter-wrap">
               <legend class="filter-title">Инфраструктура:</legend>
               <ul class="filter-list">
-                <li>
-                  <input type="checkbox" name="swimming-pool" id="pool" checked>
-                  <label class="filter-list-item" for="pool">Бассейн</label>
+                <li class="filter-list-item">
+                  <label class="filter-list-item-label" for="pool">
+                    <input class="filter-list-item-input" type="checkbox" name="swimming-pool" id="pool" checked><span class="filter-list-item-checkbox"></span>Бассейн
+                  </label>
                 </li>
-                <li>
-                  <input type="checkbox" name="guest-parking" id="parking">
-                  <label class="filter-list-item" for="parking">Парковка</label>
+                <li class="filter-list-item">
+                  <label class="filter-list-item-label" for="parking">
+                    <input class="filter-list-item-input" type="checkbox" name="guest-parking" id="parking"><span class="filter-list-item-checkbox"></span>Парковка
+                  </label>
                 </li>
-                <li>
-                  <input type="checkbox" name="wi-fi" id="wifi">
-                  <label class="filter-list-item" for="wifi">Wi-Fi   </label>
+                <li class="filter-list-item">
+                  <label class="filter-list-item-label" for="wifi">
+                    <input class="filter-list-item-input" type="checkbox" name="wi-fi" id="wifi"><span class="filter-list-item-checkbox"></span>Wi-Fi
+                  </label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="filter-wrap">
               <legend class="filter-title">Тип жилья:</legend>
               <ul class="filter-list">
-                <li>
-                  <input type="checkbox" name="hotel" id="hotel" checked>
-                  <label class="filter-list-item" for="hotel">Гостиница</label>
+                <li class="filter-list-item">
+                  <label class="filter-list-item-label" for="hotel">
+                    <input class="filter-list-item-input" type="checkbox" name="hotel" id="hotel" checked><span class="filter-list-item-checkbox"></span>Гостиница
+                  </label>
                 </li>
-                <li>
-                  <input type="checkbox" name="motel" id="motel" checked>
-                  <label class="filter-list-item" for="motel">Мотель</label>
+                <li class="filter-list-item">
+                  <label class="filter-list-item-label" for="motel">
+                    <input class="filter-list-item-input" type="checkbox" name="motel" id="motel" checked><span class="filter-list-item-checkbox"></span>Мотель
+                  </label>
                 </li>
-                <li>
-                  <input type="checkbox" name="appartments" id="appartments" checked>
-                  <label class="filter-list-item" for="appartments">Аппартаменты   </label>
+                <li class="filter-list-item">
+                  <label class="filter-list-item-label" for="appartments"> 
+                    <input class="filter-list-item-input" type="checkbox" name="appartments" id="appartments" checked><span class="filter-list-item-checkbox"> </span>Аппартаменты 
+                  </label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="filter-wrap">
-              <legend class="filter-title">Стоимость в сутки (Р):</legend>
-              <input type="text" value="0" name="min-value">
-              <input type="text" value="3000" name="max-value">
-              <!-- пока убрал как бесполезную информацию input(type='range', min='0', max='3888', value='3000', name='price-range')-->
+            <fieldset class="filter-wrap filter-wrap-price-range">
+              <legend class="filter-title filter-title-range">Стоимость в сутки (Р):</legend>
+              <div class="price-controls">
+                <div class="price-controls-value">
+                  <label class="price-controls-text" for="min-price">от</label>
+                  <input type="text" value="0" name="min-price" id="min-price">
+                </div>
+                <div class="price-controls-value">
+                  <label class="price-controls-text" for="max-price">до</label>
+                  <input type="text" value="3000" name="max-price" id="max-price">
+                </div>
+              </div>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="range-toggle range-toggle-min"></div>
+                <div class="range-toggle range-toggle-max"></div>
+              </div>
               <button class="filter-button" type="submit">Показать</button>
             </fieldset>
           </form>
@@ -72,7 +92,15 @@
           <div class="search-result">
             <div class="search-result-title">Найдено: 3</div>
             <div class="sorting-types"><span class="sorting-type-text">Сортировка: </span><span class="sorting-type-current">По цене</span><a class="sorting-type" href="#">По типу</a><a class="sorting-type" href="#">По рейтингу</a></div>
-            <div class="sorting-arrows"><a class="sorting-arrow arrow-up" href="#">Up</a><a class="sorting-arrow arrow-down" href="#">Down</a></div>
+            <div class="sorting-arrows-wrap"><a class="sorting-arrow arrow-up" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                  <title>Сортировка Вверх</title>
+                  <path fill="#cacaca" d="M5.5 0L0 10h11z"></path>
+                </svg></a><a class="sorting-arrow arrow-down arrow-current" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                  <title>Сортировка Вниз</title>
+                  <path fill="#cacaca" d="M5.5 0L0 10h11z"></path>
+                </svg></a></div>
           </div>
           <ul class="hotels-list">
             <li class="hotels-list-item">
@@ -90,7 +118,7 @@
                 </div>
                 <div class="hotel-rating">
                   <div class="hotel-rating-stars stars-four"></div>
-                  <div class="hotel-rating-text">Рейтинг 8,5</div>
+                  <div class="hotel-rating-text">Рейтинг: 8,5</div>
                 </div>
               </article>
             </li>
@@ -109,7 +137,7 @@
                 </div>
                 <div class="hotel-rating">
                   <div class="hotel-rating-stars stars-three"></div>
-                  <div class="hotel-rating-text">Рейтинг 8,9</div>
+                  <div class="hotel-rating-text">Рейтинг: 8,9</div>
                 </div>
               </article>
             </li>
@@ -128,7 +156,7 @@
                 </div>
                 <div class="hotel-rating">
                   <div class="hotel-rating-stars stars-two"></div>
-                  <div class="hotel-rating-text">Рейтинг 9,2</div>
+                  <div class="hotel-rating-text">Рейтинг: 9,2</div>
                 </div>
               </article>
             </li>
@@ -166,5 +194,7 @@
         </div>
       </footer>
     </div>
+    <script src="js/scripts.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDt3kX_h9MpU5asj6ZP2rnhJL9EyRt09mM&amp;callback=initMap" async defer></script>
   </body>
 </html>
