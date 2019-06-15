@@ -765,7 +765,7 @@ input[type="radio"].visually-hidden {
   fill: #88b7d5;
 }
 
-.arrow-down {
+.arrow-down svg {
   transform: rotate(180deg);
 }
 
