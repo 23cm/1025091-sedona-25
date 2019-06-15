@@ -1,6 +1,9 @@
 var hotelSearchButton = document.querySelector(".booking-promo-button");
 var searchPopup = document.querySelector(".booking-form");
 var form = searchPopup.querySelector("form");
+var checkInDate = form.querySelector("#checkInDate");
+var checkOutDate = form.querySelector("#checkOutDate");
+var adultsQty = form.querySelector("#adultsQty");
 
 hotelSearchButton.addEventListener("click",
 function (evt) {
@@ -9,9 +12,12 @@ function (evt) {
 });
 
 form.addEventListener("submit", function (evt) {
+  if (!checkInDate.value) {
   evt.preventDefault();
-});
+  console.log('Дату введи!')
 
+}
+});
 
 
 

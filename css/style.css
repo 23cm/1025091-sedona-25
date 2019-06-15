@@ -259,6 +259,11 @@ input[type="radio"].visually-hidden {
   padding-top: 76px;
 }
 
+.benefits {
+  position: relative;
+  z-index: 200;
+}
+
 .benefits-promo {
   margin: 0;
   margin-bottom: 52px;
@@ -344,9 +349,9 @@ input[type="radio"].visually-hidden {
 }
 
 .card-with-img {
-  width: 1200px;
   display: flex;
   justify-content: flex-start;
+  width: 1200px;
 }
 
 .img-card-wide {
@@ -389,6 +394,8 @@ input[type="radio"].visually-hidden {
 /* #Заинтересовались + Кнопка Поиск Гостиницы в Седоне
   ================================================== */
 .booking-promo {
+  position: relative;
+  z-index: 200;
   margin: 0;
   padding: 52px 0 0 0;
   background-color: #ffffff;
@@ -413,6 +420,8 @@ input[type="radio"].visually-hidden {
 }
 
 .booking-promo-button {
+  position: relative;
+  z-index: 200;
   display: block;
   width: 568px;
   margin: 0 auto;
@@ -448,7 +457,6 @@ input[type="radio"].visually-hidden {
 }
 
 #map {
-  z-index: 0;
   height: 100%;
 }
 
@@ -465,7 +473,7 @@ input[type="radio"].visually-hidden {
 .booking-form {
   position: absolute;
   left: 50%;
-  z-index: 3;
+  z-index: 5;
   box-sizing: border-box;
   width: 568px;
   margin-left: -284px;
@@ -474,6 +482,8 @@ input[type="radio"].visually-hidden {
   line-height: 1.2;
   color: #000000;
   background-color: #ffffff;
+  animation-name: anime;
+  animation-duration: 1s;
 }
 
 .booking-form-row {
@@ -595,6 +605,15 @@ input[type="radio"].visually-hidden {
 
 .modal-hide {
   display: none;
+}
+
+@keyframes anime {
+  100% {
+    transform: translateY(0px);
+  }
+  0% {
+    transform: translateY(-400px);
+  }
 }
 
 .hotel-search {
