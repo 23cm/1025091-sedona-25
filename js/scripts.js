@@ -4,6 +4,7 @@ var form = searchPopup.querySelector("form");
 var checkInDate = form.querySelector("#checkInDate");
 var checkOutDate = form.querySelector("#checkOutDate");
 var adultsQty = form.querySelector("#adultsQty");
+var childsQty =form.querySelector("#childsQty");
 
 hotelSearchButton.addEventListener("click",
 function (evt) {
@@ -14,9 +15,23 @@ function (evt) {
 form.addEventListener("submit", function (evt) {
   if (!checkInDate.value) {
   evt.preventDefault();
-  console.log('Дату введи!')
-
+  console.log('Укажите дату заезда!');
 }
+  if (!checkOutDate.value) {
+    evt.preventDefault();
+    console.log('Укажите дату выезда!');
+  }
+  if (!adultsQty.value || adultsQty.value <=0) {
+    evt.preventDefault();
+    console.log("Укажите количество взрослых гостей!");
+  }
+  if (childsQty.value < 0) {
+    evt.preventDefault();
+    console.log("Укажите корректное значение количества детей!");
+
+  }
+
+
 });
 
 
