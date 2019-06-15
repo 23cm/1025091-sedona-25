@@ -6,6 +6,15 @@ var checkOutDate = form.querySelector("#checkOutDate");
 var adultsQty = form.querySelector("#adultsQty");
 var childsQty =form.querySelector("#childsQty");
 
+var isStorageSupport = true;
+var storage = "";
+
+try {
+  storage = localStorage.getItem("login");
+} catch (err) {
+  isStorageSupport = false;
+}
+
 hotelSearchButton.addEventListener("click",
 function (evt) {
   evt.preventDefault();
@@ -17,13 +26,25 @@ form.addEventListener("submit", function (evt) {
   evt.preventDefault();
   console.log('Укажите дату заезда!');
 }
+else {
+  localStorage.setItem("adultsQty", adultsQty.value);
+  localStorage.setItem("childsQty", childsQty.value);
+}
   if (!checkOutDate.value) {
     evt.preventDefault();
     console.log('Укажите дату выезда!');
   }
+  else {
+    localStorage.setItem("adultsQty", adultsQty.value);
+    localStorage.setItem("childsQty", childsQty.value);
+  }
   if (!adultsQty.value || adultsQty.value <=0) {
     evt.preventDefault();
     console.log("Укажите количество взрослых гостей!");
+  }
+  else {
+    localStorage.setItem("adultsQty", adultsQty.value);
+    localStorage.setItem("childsQty", childsQty.value);
   }
   if (childsQty.value < 0) {
     evt.preventDefault();
