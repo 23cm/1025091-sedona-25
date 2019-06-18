@@ -36,19 +36,16 @@
               </div>
               <div class="img-card-wide"><img src="img/800x256-town-sedona-01.jpg" width="800" height="256" alt="Городской пейзаж, одна из уютных улочек Седоны"></div>
             </div>
-            <div class="card card-with-icon">
-              <div class="icon icon-house"></div>
-              <h2 class="card-title">Жильё</h2>
+            <div class="card card-icon">
+              <h2 class="card-title card-title-house">Жильё</h2>
               <p class="card-text">Рекомендуем пожить в настоящем мотеле,&nbsp;всё как в кино!</p>
             </div>
-            <div class="card card-with-icon">
-              <div class="icon icon-burger"></div>
-              <h2 class="card-title">Еда</h2>
+            <div class="card card-icon">
+              <h2 class="card-title card-title-burger">Еда</h2>
               <p class="card-text">Всегда заказывайте фирменный бургер, вы&nbsp;не разочаруетесь!</p>
             </div>
-            <div class="card card-with-icon">
-              <div class="icon icon-gift"></div>
-              <h2 class="card-title">Сувениры</h2>
+            <div class="card card-icon">
+              <h2 class="card-title card-title-gift">Сувениры</h2>
               <p class="card-text">Не только китайского, но и местного производства!</p>
             </div>
             <div class="card-with-img">
@@ -86,7 +83,7 @@
               <h2 class="visually-hidden">Поиск гостиницы в Cедоне</h2>
               <div class="booking-form-row">
                 <label class="booking-form-label" for="checkInDate">Дата&nbsp;заезда:</label>
-                <div class="booking-form-calendar">
+                <div class="booking-form-calendar" id="checkIn">
                   <input class="booking-form-input" type="text" name="checkin-date" id="checkInDate" placeholder="24 апреля 2017" value="24 апреля 2017">
                   <button class="btn" type="button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22">
@@ -98,7 +95,7 @@
               </div>
               <div class="booking-form-row">
                 <label class="booking-form-label" for="checkOutDate">Дата&nbsp;выезда:</label>
-                <div class="booking-form-calendar">
+                <div class="booking-form-calendar" id="checkOut">
                   <input class="booking-form-input" type="text" name="check-out-date" id="checkOutDate" placeholder="4 июля 2017" value="4 июля 2017">
                   <button class="btn" type="button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22">
@@ -110,7 +107,7 @@
               </div>
               <div class="booking-form-row">
                 <label class="booking-form-label" for="adultsQty">Взрослые:</label>
-                <div class="booking-form-adults">
+                <div class="booking-form-adults" id="adultsInfo">
                   <button class="btn" type="button">
                     <svg width="11px" height="11px">
                       <line x1="0" y1="50%" x2="100%" y2="50%" stroke="#b7b7b7" stroke-width="3"></line>
@@ -179,7 +176,7 @@
         </div>
       </footer>
     </div>
-    <script src="js/scripts.min.js"></script>
+    <script src="js/scripts.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDt3kX_h9MpU5asj6ZP2rnhJL9EyRt09mM&amp;callback=initMap" async defer></script>
   </body>
 </html>
