@@ -580,6 +580,8 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
   -webkit-box-shadow: 0 0 15px rgba(0, 1, 1, 0.2);
           box-shadow: 0 0 15px rgba(0, 1, 1, 0.2);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
 .booking-form-row {
@@ -713,35 +715,34 @@ input[type="radio"].visually-hidden {
 }
 
 @-webkit-keyframes anime {
-  0% {
-    -webkit-transform: translateY(-400px);
-            transform: translateY(-400px);
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+    visibility: visible;
   }
-  100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes anime {
-  0% {
-    -webkit-transform: translateY(-400px);
-            transform: translateY(-400px);
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+    visibility: visible;
   }
-  100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
-}
-
-.modal-hide {
-  display: none;
 }
 
 .modal-show {
-  display: block;
-  -webkit-animation: anime 200ms linear forwards;
-          animation: anime 200ms linear forwards;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  -webkit-animation: anime 300ms linear forwards;
+          animation: anime 300ms linear forwards;
 }
 
 .form-error {
@@ -756,50 +757,48 @@ input[type="radio"].visually-hidden {
 }
 
 @-webkit-keyframes shake {
-  0% {
-    left: 49%;
+  from,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
-  16% {
-    left: 53%;
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+            transform: translate3d(-10px, 0, 0);
   }
-  33% {
-    left: 48%;
-  }
-  50% {
-    left: 54%;
-  }
-  66% {
-    left: 47%;
-  }
-  83% {
-    left: 55%;
-  }
-  100% {
-    left: 50%;
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+            transform: translate3d(10px, 0, 0);
   }
 }
 
 @keyframes shake {
-  0% {
-    left: 49%;
+  from,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
-  16% {
-    left: 53%;
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+            transform: translate3d(-10px, 0, 0);
   }
-  33% {
-    left: 48%;
-  }
-  50% {
-    left: 54%;
-  }
-  66% {
-    left: 47%;
-  }
-  83% {
-    left: 55%;
-  }
-  100% {
-    left: 50%;
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+            transform: translate3d(10px, 0, 0);
   }
 }
 

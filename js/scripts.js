@@ -5,6 +5,8 @@ var checkInDate = form.querySelector("#checkInDate");
 var checkInDateError = form.querySelector("#checkIn");
 var checkOutDate = form.querySelector("#checkOutDate");
 var checkOutDateError = form.querySelector("#checkOut");
+var adultsQty = form.querySelector("#adultsQty");
+var childsQty = form.querySelector("#childsQty");
 
 var isStorageSupport = true;
 var storage = "";
@@ -15,30 +17,36 @@ try {
 }
 
 searchPopup.classList.add("modal-hide");
+searchPopup.classList.remove("form-error-warning");
 
 hotelSearchButton.addEventListener("click", function(evt) {
   evt.preventDefault();
   searchPopup.classList.toggle("modal-show");
+
   checkInDate.focus();
 });
 
 checkInDate.addEventListener("focus", function() {
   checkInDateError.classList.remove("form-error");
 });
+
 checkOutDate.addEventListener("focus", function() {
   checkOutDateError.classList.remove("form-error");
 });
-adultsQty.addEventListener("focus", function() {
-  adultsQtyError.classList.remove("form-error");
-});
+
 
 form.addEventListener("submit", function(evt) {
   var _in = checkInDate.value.trim();
   var _out = checkOutDate.value.trim();
 
-  if (_in === '' || _out === '' || _adultqty <= 0) {
+  searchPopup.classList.remove("form-error-warning");
+
+  if (_in === '' || _out === '') {
     evt.preventDefault();
-    searchPopup.classList.add("form-error-warning");
+
+    setTimeout(function() {
+      searchPopup.classList.add("form-error-warning");
+    }, 0);
 
     if (!_in) {
       checkInDateError.classList.add("form-error");
@@ -47,13 +55,11 @@ form.addEventListener("submit", function(evt) {
       checkOutDateError.classList.add("form-error");
     }
 
-    setTimeout(function() {
-      searchPopup.classList.remove("form-error-warning");
-    }, 800);
-  }
+    searchPopup.classList.add("form-error-warning");
+
   localStorage.setItem("adultsQty", adultsQty.value);
   localStorage.setItem("childsQty", childsQty.value);
-
+  }
 });
 
 function initMap() {
