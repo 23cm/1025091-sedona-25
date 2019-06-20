@@ -22,7 +22,7 @@ hotelSearchButton.addEventListener("click", function(evt) {
   evt.preventDefault();
 
   searchPopup.classList.toggle("modal-show");
-
+  searchPopup.classList.remove("form-error-warning");
   checkInDate.focus();
 });
 
@@ -34,17 +34,19 @@ checkOutDate.addEventListener("focus", function() {
   checkOutDateError.classList.remove("form-error");
 });
 
-// setTimeout(function() {
-//   searchPopup.classList.remove("form-error-warning");
-// }, 0);
+setTimeout(function() {
+  searchPopup.classList.remove("form-error-warning");
+}, 0);
 
 form.addEventListener("submit", function(evt) {
   var _in = checkInDate.value.trim();
   var _out = checkOutDate.value.trim();
-  searchPopup.classList.remove("form-error-warning");
+
   if (_in === "" || _out === "") {
     evt.preventDefault();
-
+    setTimeout(function() {
+      searchPopup.classList.add("form-error-warning");
+    }, 0);
     if (!_in) {
       checkInDateError.classList.add("form-error");
     }
