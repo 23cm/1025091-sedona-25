@@ -38,6 +38,7 @@ checkOutDate.addEventListener("focus", function() {
 form.addEventListener("submit", function(evt) {
   var _in = checkInDate.value.trim();
   var _out = checkOutDate.value.trim();
+  searchPopup.classList.remove("form-error-warning");
 
   if (_in === "" || _out === "") {
     evt.preventDefault();
