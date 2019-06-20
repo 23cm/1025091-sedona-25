@@ -8,13 +8,13 @@ var checkOutDateError = form.querySelector("#checkOut");
 var adultsQty = form.querySelector("#adultsQty");
 var childsQty = form.querySelector("#childsQty");
 
-var isStorageSupport = true;
-var storage = "";
-try {
-  storage = localStorage.getItem("login");
-} catch (err) {
-  isStorageSupport = false;
-}
+// var isStorageSupport = true;
+// var storage = "";
+// try {
+//   storage = localStorage.getItem("login");
+// } catch (err) {
+//   isStorageSupport = false;
+// }
 
 searchPopup.classList.remove("modal-show");
 
@@ -34,9 +34,6 @@ checkOutDate.addEventListener("focus", function() {
   checkOutDateError.classList.remove("form-error");
 });
 
-setTimeout(function() {
-  searchPopup.classList.remove("form-error-warning");
-}, 0);
 
 form.addEventListener("submit", function(evt) {
   var _in = checkInDate.value.trim();
@@ -53,8 +50,6 @@ form.addEventListener("submit", function(evt) {
     if (!_out) {
       checkOutDateError.classList.add("form-error");
     }
-
-    searchPopup.classList.add("form-error-warning");
 
     localStorage.setItem("adultsQty", adultsQty.value);
     localStorage.setItem("childsQty", childsQty.value);
